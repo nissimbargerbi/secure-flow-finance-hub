@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck, Wallet, CreditCard, DollarSign } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -51,33 +51,38 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-radial from-blue-200/20 to-transparent rounded-full blur-2xl"></div>
               <div className="bg-white rounded-xl p-3 shadow-xl relative">
-                <div className="bg-gradient-to-r from-finance-primary/10 to-finance-accent/5 rounded-lg p-6">
-                  <div className="bg-white rounded-lg shadow-sm p-4 mb-4">
-                    <h3 className="text-lg font-semibold mb-2">Deposit Summary</h3>
-                    <div className="space-y-2">
-                      <div className="flex justify-between">
-                        <span className="text-gray-500">Amount:</span>
-                        <span className="font-semibold">$1,000.00</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-500">Method:</span>
-                        <span className="font-semibold">Credit Card</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-500">Processing Fee:</span>
-                        <span className="font-semibold">$0.00</span>
-                      </div>
-                      <div className="h-px bg-gray-100 my-2"></div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-500">Total:</span>
-                        <span className="font-bold text-finance-primary">$1,000.00</span>
+                <div className="bg-gradient-to-r from-finance-primary/10 to-finance-accent/5 rounded-lg p-6 flex items-center justify-center">
+                  {/* B2B Payment Animation */}
+                  <div className="relative h-52 w-full">
+                    {/* Payment Network Animation */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-32 h-32 border-4 border-finance-primary/20 rounded-full animate-pulse"></div>
+                      <div className="absolute w-24 h-24 border-4 border-finance-secondary/30 rounded-full animate-pulse"></div>
+                      <div className="absolute w-16 h-16 border-4 border-finance-accent/40 rounded-full animate-pulse"></div>
+                    </div>
+                    
+                    {/* Payment Icons */}
+                    <div className="absolute top-0 left-1/4 bg-white p-2 rounded-full shadow-lg animate-[float_4s_ease-in-out_infinite]">
+                      <CreditCard className="h-6 w-6 text-finance-primary" />
+                    </div>
+                    <div className="absolute bottom-4 right-1/4 bg-white p-2 rounded-full shadow-lg animate-[float_5s_ease-in-out_0.5s_infinite]">
+                      <Wallet className="h-6 w-6 text-finance-accent" />
+                    </div>
+                    <div className="absolute top-1/2 right-8 bg-white p-2 rounded-full shadow-lg animate-[float_6s_ease-in-out_1s_infinite]">
+                      <DollarSign className="h-6 w-6 text-finance-success" />
+                    </div>
+                    
+                    {/* Transaction Lines */}
+                    <div className="absolute top-1/4 left-1/3 w-16 h-0.5 bg-gradient-to-r from-finance-primary to-transparent animate-pulse transform rotate-45"></div>
+                    <div className="absolute top-2/3 left-1/2 w-16 h-0.5 bg-gradient-to-r from-finance-accent to-transparent animate-pulse transform -rotate-45"></div>
+                    <div className="absolute top-1/2 left-1/4 w-16 h-0.5 bg-gradient-to-r from-finance-success to-transparent animate-pulse transform rotate-12"></div>
+                    
+                    {/* Central Node */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg z-10">
+                      <div className="bg-gradient-to-r from-finance-primary to-finance-accent rounded-full p-2">
+                        <Wallet className="h-8 w-8 text-white" />
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex gap-2">
-                    <Button variant="outline" className="flex-1">Back</Button>
-                    <Button className="flex-1 bg-finance-primary hover:bg-finance-secondary">Confirm Deposit</Button>
                   </div>
                 </div>
               </div>
