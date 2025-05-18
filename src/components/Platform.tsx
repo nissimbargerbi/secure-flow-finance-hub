@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -147,7 +146,7 @@ const Platform = () => {
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="bg-blue-100 rounded-lg p-2">
-                      <ChartLine className="h-5 w-5 text-finance-primary" />
+                      <LineChart className="h-5 w-5 text-finance-primary" />
                     </div>
                     <div>
                       <h4 className="font-semibold">Analytics & Reporting</h4>
