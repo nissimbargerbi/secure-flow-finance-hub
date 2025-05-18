@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   CreditCard,
   Banknote,
-  EWallet,
-  Cryptocurrency,
-  ChartLine,
+  Wallet,
+  Bitcoin,
+  LineChart,
   Users
 } from "lucide-react";
 
@@ -55,7 +55,7 @@ const Platform = () => {
                   
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 rounded-lg p-2">
-                      <ChartLine className="h-5 w-5 text-finance-success" />
+                      <LineChart className="h-5 w-5 text-finance-success" />
                     </div>
                     <div>
                       <h4 className="font-semibold">Real-time Processing</h4>
@@ -110,7 +110,7 @@ const Platform = () => {
                       
                       <div className="bg-gray-50 px-4 py-2 rounded-lg flex justify-between items-center border border-gray-200">
                         <div className="flex items-center gap-3">
-                          <EWallet className="h-8 w-8 text-gray-600" />
+                          <Wallet className="h-8 w-8 text-gray-600" />
                           <div>
                             <div className="font-medium">E-Wallet</div>
                             <div className="text-xs text-gray-500">PayPal, Venmo, etc</div>
@@ -121,7 +121,7 @@ const Platform = () => {
                       
                       <div className="bg-gray-50 px-4 py-2 rounded-lg flex justify-between items-center border border-gray-200">
                         <div className="flex items-center gap-3">
-                          <Cryptocurrency className="h-8 w-8 text-gray-600" />
+                          <Bitcoin className="h-8 w-8 text-gray-600" />
                           <div>
                             <div className="font-medium">Cryptocurrency</div>
                             <div className="text-xs text-gray-500">BTC, ETH & stablecoins</div>

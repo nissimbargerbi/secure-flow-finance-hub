@@ -3,11 +3,11 @@ import React from "react";
 import { 
   Banknote, 
   CreditCard, 
-  EWallet, 
-  Cryptocurrency, 
+  Wallet, 
+  Bitcoin, 
   ShieldCheck, 
   BarChart, 
-  ChartLine, 
+  LineChart, 
   Lock 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,12 +25,12 @@ const Features = () => {
       description: "High approval rates for Visa, Mastercard, and local card schemes with 3D Secure support."
     },
     {
-      icon: <EWallet className="h-8 w-8 text-finance-primary" />,
+      icon: <Wallet className="h-8 w-8 text-finance-primary" />,
       title: "E-Wallets",
       description: "Integration with popular e-wallet solutions worldwide including regional favorites."
     },
     {
-      icon: <Cryptocurrency className="h-8 w-8 text-finance-primary" />,
+      icon: <Bitcoin className="h-8 w-8 text-finance-primary" />,
       title: "Cryptocurrency",
       description: "Support for major cryptocurrencies and stablecoins with instant confirmation."
     },
@@ -45,7 +45,7 @@ const Features = () => {
       description: "Automatic routing to the best payment processor based on success rates and fees."
     },
     {
-      icon: <ChartLine className="h-8 w-8 text-finance-primary" />,
+      icon: <LineChart className="h-8 w-8 text-finance-primary" />,
       title: "Real-time Analytics",
       description: "Comprehensive dashboard with transaction monitoring and business insights."
     },
