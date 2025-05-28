@@ -50,65 +50,65 @@ const Hero = () => {
           <div className="order-first md:order-last">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-radial from-blue-200/20 to-transparent rounded-full blur-2xl"></div>
-              <div className="bg-white rounded-xl p-3 shadow-xl relative overflow-hidden">
-                <div className="bg-gradient-to-r from-finance-primary/10 to-finance-accent/5 rounded-lg p-6">
+              <div className="bg-white rounded-xl p-6 shadow-xl relative overflow-hidden">
+                <div className="bg-gradient-to-r from-finance-primary/10 to-finance-accent/5 rounded-lg p-8">
                   {/* Assembly Line Animation */}
-                  <div className="relative h-52 w-full">
-                    {/* Conveyor Belt */}
+                  <div className="relative h-48 w-full">
+                    {/* Conveyor Belt Base */}
                     <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2">
-                      <div className="h-2 bg-gray-300 rounded-full relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 animate-[slide-right_3s_linear_infinite]"></div>
+                      <div className="h-3 bg-gray-400 rounded-full relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-gray-500 via-gray-400 to-gray-500 animate-[slide-right_2s_linear_infinite] opacity-80"></div>
                       </div>
                     </div>
                     
-                    {/* Payment Symbols Moving on Belt */}
-                    <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 -translate-y-8">
-                      {/* First Row */}
-                      <div className="flex items-center justify-between animate-[slide-right_8s_linear_infinite]">
-                        <div className="bg-white p-3 rounded-lg shadow-md">
-                          <div className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">VISA</div>
+                    {/* Top Row - Payment Cards */}
+                    <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 -translate-y-12">
+                      <div className="flex items-center justify-between animate-[slide-right_6s_linear_infinite]">
+                        <div className="bg-white p-2 rounded-lg shadow-md border">
+                          <div className="w-10 h-6 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">VISA</div>
                         </div>
-                        <div className="bg-white p-3 rounded-lg shadow-md">
-                          <div className="w-8 h-5 bg-red-500 rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
+                        <div className="bg-white p-2 rounded-lg shadow-md border">
+                          <div className="w-10 h-6 bg-red-500 rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
                         </div>
-                        <div className="bg-white p-3 rounded-lg shadow-md">
-                          <div className="w-8 h-5 bg-blue-800 rounded text-white text-xs flex items-center justify-center font-bold">AMEX</div>
+                        <div className="bg-white p-2 rounded-lg shadow-md border">
+                          <div className="w-10 h-6 bg-blue-800 rounded text-white text-xs flex items-center justify-center font-bold">AMEX</div>
                         </div>
-                        <div className="bg-white p-2 rounded-lg shadow-md">
+                        <div className="bg-white p-2 rounded-lg shadow-md border">
                           <Bitcoin className="h-6 w-6 text-orange-500" />
                         </div>
                       </div>
                     </div>
                     
-                    <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 translate-y-8">
-                      {/* Second Row - Delayed */}
-                      <div className="flex items-center justify-between animate-[slide-right_8s_linear_infinite_2s]">
-                        <div className="bg-white p-2 rounded-lg shadow-md">
+                    {/* Bottom Row - Digital Payment Methods */}
+                    <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 translate-y-12">
+                      <div className="flex items-center justify-between animate-[slide-right_6s_linear_infinite] animation-delay-3s">
+                        <div className="bg-white p-2 rounded-lg shadow-md border">
                           <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center">
                             <span className="text-white text-xs font-bold">Ξ</span>
                           </div>
                         </div>
-                        <div className="bg-white p-2 rounded-lg shadow-md">
+                        <div className="bg-white p-2 rounded-lg shadow-md border">
                           <Wallet className="h-6 w-6 text-finance-accent" />
                         </div>
-                        <div className="bg-white p-2 rounded-lg shadow-md">
+                        <div className="bg-white p-2 rounded-lg shadow-md border">
                           <Banknote className="h-6 w-6 text-finance-success" />
                         </div>
-                        <div className="bg-white p-2 rounded-lg shadow-md">
+                        <div className="bg-white p-2 rounded-lg shadow-md border">
                           <CreditCard className="h-6 w-6 text-finance-primary" />
                         </div>
                       </div>
                     </div>
                     
                     {/* Assembly Line Structure */}
-                    <div className="absolute top-0 left-4 w-1 h-full bg-gray-400 rounded"></div>
-                    <div className="absolute top-0 right-4 w-1 h-full bg-gray-400 rounded"></div>
+                    <div className="absolute top-4 left-4 w-2 h-40 bg-gray-500 rounded"></div>
+                    <div className="absolute top-4 right-4 w-2 h-40 bg-gray-500 rounded"></div>
                     
                     {/* Processing Hub */}
-                    <div className="absolute top-4 right-8 bg-white rounded-lg p-2 shadow-lg">
+                    <div className="absolute top-2 right-8 bg-white rounded-lg p-3 shadow-lg border">
                       <div className="bg-gradient-to-r from-finance-primary to-finance-accent rounded p-2">
                         <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
                       </div>
+                      <div className="text-xs text-gray-600 mt-1 text-center">Processing</div>
                     </div>
                   </div>
                 </div>
