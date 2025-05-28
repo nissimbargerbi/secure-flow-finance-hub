@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Globe, BarChart, Bell, LayoutDashboard } from "lucide-react";
+import { Globe, Settings, Bell, LayoutDashboard } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Solutions = () => {
@@ -12,9 +12,9 @@ const Solutions = () => {
       iconBg: "bg-blue-100",
     },
     {
-      title: "SMART ROUTING",
-      description: "Improved approval rates and fewer declines.",
-      icon: <BarChart className="h-10 w-10 text-finance-success" />,
+      title: "PLUG AND PLAY INTEGRATION",
+      description: "Full integration to your platform within days with our simple API and comprehensive documentation.",
+      icon: <Settings className="h-10 w-10 text-finance-success" />,
       iconBg: "bg-green-100",
     },
     {
@@ -37,7 +37,7 @@ const Solutions = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">OUR SOLUTION</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We provide a comprehensive payment infrastructure designed specifically for trading platforms and brokers.
+            We provide a comprehensive payment infrastructure designed specifically for online platforms.
           </p>
         </div>
 
