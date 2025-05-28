@@ -46,9 +46,9 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="bg-finance-primary rounded-lg w-10 h-10 flex items-center justify-center">
-            <span className="text-white font-bold text-xl">P</span>
+            <span className="text-white font-bold text-xl">S</span>
           </div>
-          <span className="font-bold text-xl text-finance-dark">PayRoute</span>
+          <span className="font-bold text-xl text-finance-dark">SamaTech</span>
         </div>
 
         {/* Desktop Navigation */}
