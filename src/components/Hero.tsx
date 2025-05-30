@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShieldCheck, Wallet, CreditCard, DollarSign, Banknote, Bitcoin } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -52,64 +52,155 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-radial from-blue-200/20 to-transparent rounded-full blur-2xl"></div>
               <div className="bg-white rounded-xl p-3 shadow-xl relative overflow-hidden">
                 <div className="bg-gradient-to-r from-finance-primary/10 to-finance-accent/5 rounded-lg p-6">
-                  {/* Assembly Line Animation */}
-                  <div className="relative h-52 w-full">
-                    {/* Conveyor Belt */}
-                    <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2">
-                      <div className="h-2 bg-gray-300 rounded-full relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-r from-gray-400 via-gray-300 to-gray-400 animate-[slide-right_3s_linear_infinite]"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Payment Symbols Moving on Belt */}
-                    <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 -translate-y-8">
-                      {/* First Row */}
-                      <div className="flex items-center justify-between animate-[slide-right_8s_linear_infinite]">
-                        <div className="bg-white p-3 rounded-lg shadow-md">
-                          <div className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">VISA</div>
-                        </div>
-                        <div className="bg-white p-3 rounded-lg shadow-md">
-                          <div className="w-8 h-5 bg-red-500 rounded text-white text-xs flex items-center justify-center font-bold">MC</div>
-                        </div>
-                        <div className="bg-white p-3 rounded-lg shadow-md">
-                          <div className="w-8 h-5 bg-blue-800 rounded text-white text-xs flex items-center justify-center font-bold">AMEX</div>
-                        </div>
-                        <div className="bg-white p-2 rounded-lg shadow-md">
-                          <Bitcoin className="h-6 w-6 text-orange-500" />
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 translate-y-8">
-                      {/* Second Row - Delayed */}
-                      <div className="flex items-center justify-between animate-[slide-right_8s_linear_infinite_2s]">
-                        <div className="bg-white p-2 rounded-lg shadow-md">
-                          <div className="w-6 h-6 bg-gray-800 rounded-full flex items-center justify-center">
-                            <span className="text-white text-xs font-bold">Ξ</span>
-                          </div>
-                        </div>
-                        <div className="bg-white p-2 rounded-lg shadow-md">
-                          <Wallet className="h-6 w-6 text-finance-accent" />
-                        </div>
-                        <div className="bg-white p-2 rounded-lg shadow-md">
-                          <Banknote className="h-6 w-6 text-finance-success" />
-                        </div>
-                        <div className="bg-white p-2 rounded-lg shadow-md">
-                          <CreditCard className="h-6 w-6 text-finance-primary" />
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Assembly Line Structure */}
-                    <div className="absolute top-0 left-4 w-1 h-full bg-gray-400 rounded"></div>
-                    <div className="absolute top-0 right-4 w-1 h-full bg-gray-400 rounded"></div>
-                    
-                    {/* Processing Hub */}
-                    <div className="absolute top-4 right-8 bg-white rounded-lg p-2 shadow-lg">
-                      <div className="bg-gradient-to-r from-finance-primary to-finance-accent rounded p-2">
-                        <div className="w-4 h-4 bg-white rounded-full animate-pulse"></div>
-                      </div>
-                    </div>
+                  {/* SVG Animation */}
+                  <div className="relative h-96 w-full">
+                    <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                      <defs>
+                        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor: "#667eea", stopOpacity: 1}} />
+                          <stop offset="100%" style={{stopColor: "#764ba2", stopOpacity: 1}} />
+                        </linearGradient>
+                        <filter id="glow">
+                          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                          <feMerge> 
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                          </feMerge>
+                        </filter>
+                        <filter id="shadow">
+                          <feDropShadow dx="0" dy="4" blur="8" floodOpacity="0.3"/>
+                        </filter>
+                      </defs>
+                      
+                      {/* Background */}
+                      <rect width="800" height="600" fill="url(#bgGradient)"/>
+                      
+                      {/* Connection Lines */}
+                      <g stroke="#ffffff" strokeWidth="2" opacity="0.6" fill="none">
+                        {/* Dollar to Cart */}
+                        <path d="M 200 150 Q 350 200 380 280" strokeDasharray="5,5">
+                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+                        </path>
+                        {/* Euro to Cart */}
+                        <path d="M 150 250 Q 300 250 380 300" strokeDasharray="5,5">
+                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2.2s" repeatCount="indefinite"/>
+                        </path>
+                        {/* Bitcoin to Cart */}
+                        <path d="M 200 450 Q 350 400 380 320" strokeDasharray="5,5">
+                          <animate attributeName="stroke-dashoffset" values="0;10" dur="1.8s" repeatCount="indefinite"/>
+                        </path>
+                        {/* ETH to Cart */}
+                        <path d="M 600 150 Q 450 200 420 280" strokeDasharray="5,5">
+                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2.1s" repeatCount="indefinite"/>
+                        </path>
+                        {/* Yen to Cart */}
+                        <path d="M 650 250 Q 500 250 420 300" strokeDasharray="5,5">
+                          <animate attributeName="stroke-dashoffset" values="0;10" dur="1.9s" repeatCount="indefinite"/>
+                        </path>
+                        {/* Credit Card to Cart */}
+                        <path d="M 600 450 Q 450 400 420 320" strokeDasharray="5,5">
+                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2.3s" repeatCount="indefinite"/>
+                        </path>
+                        {/* Bank to Cart */}
+                        <path d="M 400 500 L 400 360" strokeDasharray="5,5">
+                          <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+                        </path>
+                      </g>
+                      
+                      {/* Central Shopping Cart */}
+                      <g transform="translate(350,250)" filter="url(#shadow)">
+                        <circle cx="50" cy="50" r="60" fill="#ffffff" opacity="0.95"/>
+                        <circle cx="50" cy="50" r="55" fill="none" stroke="#4f46e5" strokeWidth="3"/>
+                        
+                        {/* Shopping Cart Icon */}
+                        <g transform="translate(25,25)" fill="#4f46e5" stroke="#4f46e5" strokeWidth="2">
+                          <rect x="10" y="20" width="40" height="30" rx="3" fill="none"/>
+                          <path d="M10 20L5 5H0" fill="none"/>
+                          <circle cx="20" cy="60" r="3" fill="#4f46e5"/>
+                          <circle cx="40" cy="60" r="3" fill="#4f46e5"/>
+                          <line x1="10" y1="30" x2="50" y2="30"/>
+                          <line x1="15" y1="40" x2="45" y2="40"/>
+                        </g>
+                      </g>
+                      
+                      {/* Dollar Symbol */}
+                      <g transform="translate(150,100)" filter="url(#glow)">
+                        <circle cx="50" cy="50" r="40" fill="#22c55e" opacity="0.9"/>
+                        <text x="50" y="60" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="white">$</text>
+                      </g>
+                      
+                      {/* Euro Symbol */}
+                      <g transform="translate(100,200)" filter="url(#glow)">
+                        <circle cx="50" cy="50" r="40" fill="#3b82f6" opacity="0.9"/>
+                        <text x="50" y="62" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="white">€</text>
+                      </g>
+                      
+                      {/* Bitcoin Symbol */}
+                      <g transform="translate(150,400)" filter="url(#glow)">
+                        <circle cx="50" cy="50" r="40" fill="#f59e0b" opacity="0.9"/>
+                        <text x="50" y="62" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill="white">₿</text>
+                      </g>
+                      
+                      {/* Ethereum Symbol */}
+                      <g transform="translate(550,100)" filter="url(#glow)">
+                        <circle cx="50" cy="50" r="40" fill="#8b5cf6" opacity="0.9"/>
+                        <g transform="translate(35,25)">
+                          <polygon points="15,5 15,20 25,15" fill="white"/>
+                          <polygon points="15,25 15,40 25,30" fill="white" opacity="0.7"/>
+                          <polygon points="5,15 15,20 15,5" fill="white" opacity="0.8"/>
+                          <polygon points="5,30 15,40 15,25" fill="white" opacity="0.6"/>
+                        </g>
+                      </g>
+                      
+                      {/* Yen Symbol */}
+                      <g transform="translate(600,200)" filter="url(#glow)">
+                        <circle cx="50" cy="50" r="40" fill="#ef4444" opacity="0.9"/>
+                        <text x="50" y="62" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="white">¥</text>
+                      </g>
+                      
+                      {/* Credit Card */}
+                      <g transform="translate(550,400)" filter="url(#glow)">
+                        <rect x="10" y="30" width="80" height="50" rx="8" fill="#06b6d4" opacity="0.9"/>
+                        <rect x="15" y="40" width="70" height="8" fill="white" opacity="0.8"/>
+                        <rect x="15" y="55" width="25" height="4" fill="white" opacity="0.6"/>
+                        <rect x="45" y="55" width="15" height="4" fill="white" opacity="0.6"/>
+                        <rect x="15" y="65" width="35" height="4" fill="white" opacity="0.6"/>
+                      </g>
+                      
+                      {/* Bank Symbol */}
+                      <g transform="translate(350,450)" filter="url(#glow)">
+                        <rect x="10" y="40" width="80" height="40" fill="#6366f1" opacity="0.9"/>
+                        <polygon points="50,20 20,40 80,40" fill="#6366f1" opacity="0.9"/>
+                        <rect x="25" y="50" width="8" height="20" fill="white"/>
+                        <rect x="38" y="50" width="8" height="20" fill="white"/>
+                        <rect x="51" y="50" width="8" height="20" fill="white"/>
+                        <rect x="64" y="50" width="8" height="20" fill="white"/>
+                        <rect x="15" y="75" width="70" height="4" fill="white"/>
+                      </g>
+                      
+                      {/* Title */}
+                      <text x="400" y="50" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill="white">
+                        Comprehensive Payments Solution
+                      </text>
+                      
+                      {/* Subtitle */}
+                      <text x="400" y="80" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="16" fill="white" opacity="0.8">
+                        One platform, all payment methods
+                      </text>
+                      
+                      {/* Floating particles for visual effect */}
+                      <g opacity="0.3">
+                        <circle cx="100" cy="350" r="2" fill="white">
+                          <animate attributeName="cy" values="350;330;350" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="700" cy="180" r="2" fill="white">
+                          <animate attributeName="cy" values="180;160;180" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="650" cy="400" r="2" fill="white">
+                          <animate attributeName="cy" values="400;380;400" dur="3.5s" repeatCount="indefinite"/>
+                        </circle>
+                      </g>
+                    </svg>
                   </div>
                 </div>
               </div>
