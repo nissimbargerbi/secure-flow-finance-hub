@@ -1,4 +1,3 @@
-
 import React from "react";
 import { 
   ArrowRight,
@@ -17,11 +16,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-finance-primary rounded-lg w-10 h-10 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">P</span>
-              </div>
-              <span className="font-bold text-xl text-white">PayRoute</span>
+            <div className="flex items-center mb-6">
+              <img 
+                src="/lovable-uploads/bdb5ef5f-0e6d-46a6-aa92-3f4361552f4b.png" 
+                alt="Samatech" 
+                className="h-10 w-auto"
+              />
             </div>
             
             <p className="text-gray-400 mb-4">
@@ -91,7 +91,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             <div className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} PayRoute. All rights reserved.
+              © {new Date().getFullYear()} Samatech. All rights reserved.
             </div>
             <div className="flex flex-wrap gap-4 justify-start md:justify-end text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>

@@ -44,11 +44,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="bg-finance-primary rounded-lg w-10 h-10 flex items-center justify-center">
-            <span className="text-white font-bold text-xl">S</span>
-          </div>
-          <span className="font-bold text-xl text-finance-dark">SamaTech</span>
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/bdb5ef5f-0e6d-46a6-aa92-3f4361552f4b.png" 
+            alt="Samatech" 
+            className="h-10 w-auto"
+          />
         </div>
 
         {/* Desktop Navigation */}
