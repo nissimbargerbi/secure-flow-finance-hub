@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Globe, Settings, Bell, LayoutDashboard } from "lucide-react";
+import { Globe, Settings, Bell, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Solutions = () => {
@@ -12,8 +12,8 @@ const Solutions = () => {
       iconBg: "bg-blue-100",
     },
     {
-      title: "PLUG AND PLAY INTEGRATION",
-      description: "Full integration to your platform within days with our simple API and comprehensive documentation.",
+      title: "COMPLETE INTEGRATION SOLUTION",
+      description: "Full integration to your platform within days with our simple API, comprehensive documentation, and seamless single app management for all broker payment needs.",
       icon: <Settings className="h-10 w-10 text-finance-success" />,
       iconBg: "bg-green-100",
     },
@@ -24,9 +24,9 @@ const Solutions = () => {
       iconBg: "bg-amber-100",
     },
     {
-      title: "COMPREHENSIVE PRODUCT",
-      description: "Seamless integration with a single app to manage all the broker payment needs.",
-      icon: <LayoutDashboard className="h-10 w-10 text-finance-secondary" />,
+      title: "AUTOMATIC TRIGGERS",
+      description: "Smart automation that responds to payment events, risk patterns, and business rules to optimize your payment flow.",
+      icon: <Zap className="h-10 w-10 text-finance-secondary" />,
       iconBg: "bg-sky-100",
     },
   ];

@@ -15,7 +15,7 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold !leading-tight">
-              Simplify Global <span className="text-finance-primary">Payment Processing</span> for Online Platforms
+              Simplify <span className="text-finance-primary">Payment Processing</span> for Online Platforms
             </h1>
             
             <p className="text-lg text-gray-600 md:pr-10">
@@ -24,7 +24,7 @@ const Hero = () => {
             
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-finance-primary hover:bg-finance-secondary">
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button size="lg" variant="outline">
                 Book a Demo

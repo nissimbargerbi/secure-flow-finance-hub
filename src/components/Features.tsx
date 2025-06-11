@@ -10,7 +10,6 @@ import {
   LineChart, 
   Lock 
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Features = () => {
   const features = [
@@ -76,12 +75,6 @@ const Features = () => {
               <p className="text-gray-400">{feature.description}</p>
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 flex justify-center">
-          <Button size="lg" className="bg-finance-primary hover:bg-finance-secondary">
-            Explore All Features
-          </Button>
         </div>
       </div>
     </section>
