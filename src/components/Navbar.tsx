@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -48,7 +47,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/fa2250e7-1215-449d-8ded-ee47dec1189b.png" 
             alt="Samatech" 
-            className="h-10 w-auto"
+            className="h-20 w-auto"
           />
         </div>
 
@@ -69,7 +68,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           <Button variant="outline">Login</Button>
           <Button className="bg-finance-primary hover:bg-finance-secondary">
-            Get Started
+            Get in Touch
           </Button>
         </div>
 
@@ -96,7 +95,7 @@ const Navbar = () => {
                   Login
                 </Button>
                 <Button className="w-full bg-finance-primary hover:bg-finance-secondary">
-                  Get Started
+                  Get in Touch
                 </Button>
               </div>
             </nav>

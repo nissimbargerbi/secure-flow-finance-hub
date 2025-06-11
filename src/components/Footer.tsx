@@ -1,4 +1,3 @@
-
 import React from "react";
 import { 
   ArrowRight,
@@ -21,7 +20,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/44473259-9980-49ad-bb5b-df725e15ca7f.png" 
                 alt="Samatech" 
-                className="h-10 w-auto"
+                className="h-20 w-auto"
               />
             </div>
             
