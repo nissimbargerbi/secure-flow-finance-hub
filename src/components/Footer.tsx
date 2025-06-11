@@ -1,3 +1,4 @@
+
 import React from "react";
 import { 
   ArrowRight,
@@ -18,7 +19,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-6">
               <img 
-                src="/lovable-uploads/bdb5ef5f-0e6d-46a6-aa92-3f4361552f4b.png" 
+                src="/lovable-uploads/44473259-9980-49ad-bb5b-df725e15ca7f.png" 
                 alt="Samatech" 
                 className="h-10 w-auto"
               />

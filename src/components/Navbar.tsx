@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img 
-            src="/lovable-uploads/bdb5ef5f-0e6d-46a6-aa92-3f4361552f4b.png" 
+            src="/lovable-uploads/fa2250e7-1215-449d-8ded-ee47dec1189b.png" 
             alt="Samatech" 
             className="h-10 w-auto"
           />
