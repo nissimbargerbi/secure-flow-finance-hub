@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -45,7 +46,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center">
           <img 
-            src="/lovable-uploads/fa2250e7-1215-449d-8ded-ee47dec1189b.png" 
+            src="/lovable-uploads/44473259-9980-49ad-bb5b-df725e15ca7f.png" 
             alt="Samatech" 
             className="h-20 w-auto"
           />
